@@ -1,6 +1,14 @@
 package main
 
-// hair + dummy节点
+// 核心思想：分组翻转 + 哨兵节点
+// 使用 hair 作为哨兵节点永远指向头，dummy 标记当前组的前一个节点
+// 对每 k 个节点为一组进行翻转：
+//   1. 先找到当前组的尾节点 tail
+//   2. 如果不足 k 个节点，直接返回（不翻转）
+//   3. 记录下一组的开头，翻转当前组
+//   4. 将翻转后的组连接到链表中
+//   5. 更新 dummy 和 head，继续处理下一组
+// 时间复杂度：O(n)，空间复杂度：O(1)
 func reverseKGroup(head *ListNode, k int) *ListNode {
 	// hair 永远不会动,指向头
 	hair := &ListNode{Next: head}

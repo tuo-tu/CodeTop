@@ -18,7 +18,7 @@ func findKthLargest(nums []int, k int) int {
 	}
 }
 
-// 返回分区的分分界点下标
+// 返回分区的分界点下标
 func partion(nums []int, left, right int) int {
 	// 不要写成div := right，会增加复杂度
 	div_value := nums[right]

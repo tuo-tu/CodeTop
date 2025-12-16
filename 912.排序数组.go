@@ -31,4 +31,3 @@ func merge1(left, right []int) []int {
 	result = append(result, right[j:]...)
 	return result
 }
-

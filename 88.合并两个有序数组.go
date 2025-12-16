@@ -26,7 +26,6 @@ func merge2(nums1 []int, m int, nums2 []int, n int) {
 	}
 }
 
-
 func mergeSortedArrays(nums1, nums2 []int) []int {
 	m, n := len(nums1), len(nums2)
 	i, j := 0, 0

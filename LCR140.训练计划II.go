@@ -74,7 +74,6 @@ package main
 //	printList(trainingPlanII(head, -2)) // 1 2 3 4 5
 //}
 
-
 func trainingPlanII(head *ListNode, k int) *ListNode {
 	if head == nil {
 		return nil
